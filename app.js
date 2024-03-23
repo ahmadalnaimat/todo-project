@@ -1,33 +1,44 @@
-var loop=true
-var name = prompt("Enter your name")
+var Loop=true
+var Name = prompt("Enter your Name")
 
-while(loop){
-    var gender= prompt("Enter your gender (male,female)")
-    if (gender == "male" || gender == "female"){
-        loop=false
+while(Loop){
+    var Gender= prompt("Enter your Gender (male,female)")
+    if (Gender == "male" || Gender == "female"){
+        Loop=false
     }
     else{
-        alert("gender must be male or female")
+        alert("Gender must be male or female")
     }
 }
-loop=true;
-while(loop){
+Loop=true;
+while(Loop){
 var age = prompt("Enter your age")
 if(age <= 0){
     alert("the age is 0 or less")
     }
 else{
-    loop=false
+    Loop=false
 }
 }
-var message = prompt("do you want to skip welcome message")
-if(message == "skip"){
+var Message = prompt("do you want to skip welcome Message")
+if(Message == "skip"){
 }
 else{
-    if(gender == "male"){
-        alert("Welcome mr "+ name);
+    if(Gender == "male"){
+        alert("Welcome mr "+ Name);
     }
-    else if(gender == "female"){
-        alert("Welcome ms " +name);
+    else if(Gender == "female"){
+        alert("Welcome ms " +Name);
     };
 }
+
+var Question1 = prompt("do you have a bachelor degree (Yes,No)")
+var Question2 = prompt("do you enjoy the subject of you bachelor degree (Yes,No)")
+var Question3 = prompt("do you want to specialize in you bachelor degree (Yes,No)")
+var Arr=[Question1,Question2,Question3]
+for(i=0;i<=Arr.length-1;i++){
+    if (Arr[i]==="") {
+        Arr[i]="invalid";
+    }
+}
+console.log(Arr)
